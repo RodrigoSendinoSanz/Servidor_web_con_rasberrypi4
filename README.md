@@ -2,9 +2,11 @@
 <img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/Purple%20Sky%20Profile%20Header.jpg" alt="cabecera">
  Tutorial de como crear un servidor web desde tu casa solo con una rasberry
 
+<img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/creacion%20de%20servidor.JPG" alt="cabecera">
+
 - Contenido:
      - [MONTAJE](#MONTAJE)
-     - [Instalar-el-sistema-operativo:](#Instalar-el-sistema-operativo:)
+     - [Instalar-el-sistema-operativo](#Instalar-el-sistema-operativo)
      - [CREAR-SSH](#CREAR-SSH)
      - [Comandos](#Comandos)
      - [Conexión-remota](#Conexión-remota)
@@ -30,20 +32,32 @@ Instalar el ventilador:
 
 <img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/2.png" alt="cabecera">
 
-Tarjeta SD en esta se instala el sistema operativo para ello utilizaremos nuestro usb de adaptador de tarjeta
+Tarjeta SD en esta se instala el sistema operativo para ello utilizaremos nuestro usb de adaptador de tarjeta:
+
+<img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/WhatsApp%20Image%202021-08-14%20at%2014.54.15%20(2).jpeg" alt="cabecera">
 
 ## Instalar-el-sistema-operativo:
 Conectar la tarjeta microSD al ordenador mediante el conector usb insertando la tarjeta como en la imagen:
 
 Ir a : https://www.raspberrypi.org/software/
 
-se descargara un archivo .exe, lo tendrás que ejecutar te pide privilegios de administrador, y efectuar la instalación
+Se descargará un archivo .exe, lo tendrás que ejecutar te pide privilegios de administrador, y efectuar la instalación
 
-elegiremos el sistema en este caso Raspberry PI OS 32 bit (el botón choose OS) y elegiremos la tarjeta sd (choose storage) y le daremos a write
+<img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/instalador.JPG" alt="cabecera">
+
+Elegiremos el sistema en este caso Raspberry PI OS 32 bit (el botón choose OS) y elegiremos la tarjeta sd (choose storage) y le daremos a write
+
+<img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/www.JPG" alt="cabecera">
 
 Colocar la tarjeta en la parte trasera inferior de la placa como en la imagen:
 
+<img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/WhatsApp%20Image%202021-08-14%20at%2014.54.16%20(1).jpeg" alt="cabecera">
+
 Ahora tendrás que conectar un mouse y un teclado en los puertos usb, junto a un cable de ethernet (el amarillo) si es posible, y tambien conectar el cable hdmi en un lateral y en una pantalla y por ultimo conectar el cable de alimentación (conector micro usb)cuya entrada se encuentra al lado del puerto hdmi.
+
+<img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/WhatsApp%20Image%202021-08-14%20at%2014.54.15%20(7).jpeg" alt="cabecera">
+
+<img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/WhatsApp%20Image%202021-08-14%20at%2015.07.03%20(2).jpeg" alt="cabecera">
 
 una vez realizado se pulsa en el botón (la primera vez tarda un poco se paciente (y no olvide poner el canal hdmi correcto)) cuando se inicia se aprecian unas luces dentro de la placa base la luz roja es señal de que tiene corriente.
 
@@ -51,7 +65,7 @@ Saldrá una pantalla negra, no te asustes se está iniciando el sistema operativ
 
 En el siguiente paso se actualizará el software, descargando actualizaciones cuando se actualiza se reinicia.
 
-  
+<img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/WhatsApp%20Image%202021-08-14%20at%2014.54.15%20(9).jpeg" alt="cabecera">
 
 (para apagar el ordenador menú superior icono opción shutdown -> shutdown)
 
@@ -65,8 +79,6 @@ En el siguiente paso se actualizará el software, descargando actualizaciones cu
 Conectamos la tarjeta sd a el ordenador(ventana continuar sin examinar) vamos a la carpeta boot (la principal) en windows: shift y click derecho abrir ventana de powershell aquí 
 y escribir : **type nul > ssh** (si nul con una l) nos muestra error pero nos crea el archivo
 
-  
-  
 
 ### Comandos:
 
@@ -99,7 +111,9 @@ Para abrir una terminal: ctrl+alt+t /f4 (abre la terminal en la carpeta actual) 
 
 ## Conexión-remota:
 
-En una terminal escribe ifconfig en el apartado eth0: obtiene la ip en el apartado inet (debajo de flags=....) tendra esta forma **192.168.1.34**
+En una terminal escribe **ifconfig** en el apartado eth0: obtiene la ip en el apartado inet (debajo de flags=....) tendra esta forma **192.168.1.34**
+
+<img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/WhatsApp%20Image%202021-08-14%20at%2014.54.14%20(1).jpeg" alt="cabecera">
 
 También se puede utilizar nmap para saber los dispositivos conectador a la red local https://nmap.org/download.html
 
@@ -217,10 +231,9 @@ sudo apt-get install nmap
 
 ◦ nmap rodrigosendinosanz.ddns.net -p 80
 
-  
-
 ir al router y abrir el puerto 80 en la sección de puertos y poner la ip del servidor
 
-  
+<img src="https://github.com/RodrigoSendinoSanz/Servidor_web_con_rasberrypi4/blob/main/img/puerto.JPG" alt="cabecera">
+
 
 meter los archivos en la carpeta **var/www/html**
